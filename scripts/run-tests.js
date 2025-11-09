@@ -53,8 +53,8 @@ addTest("Official and community track directories contain tracks", () => {
 
 addTest("Dynamic track loader present", () => {
   ensure(
-    bundle.includes('HB("tracks/official/"') &&
-      bundle.includes('HB("tracks/community/"'),
+    bundle.includes('trackDirectoryLoader("tracks/official/"') &&
+      bundle.includes('trackDirectoryLoader("tracks/community/"'),
     "Dynamic track loader helper not found in bundle"
   );
 });

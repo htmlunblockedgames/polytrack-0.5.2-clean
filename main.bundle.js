@@ -42593,7 +42593,7 @@
                 e()
         }
         ;
-        const HB = function(e, t) {
+        const trackDirectoryLoader = function(e, t) {
             return new Promise((n => {
                 const i = new XMLHttpRequest;
                 i.overrideMimeType("text/plain"),
@@ -42629,8 +42629,8 @@
             }
             ))
         }
-          , QB = ["summer1.track", "summer2.track", "summer3.track", "summer4.track", "summer5.track", "summer6.track", "summer7.track", "winter1.track", "winter2.track", "winter3.track", "winter4.track", "desert1.track", "desert2.track", "desert3.track", "desert4.track"]
-          , WB = ["zealot.track", "shrouded_oasis.track", "cogware.track", "land_of_the_rising_sun.track", "midas_metropolis.track", "frozen_in_time.track", "winterfell.track", "launch_control.track", "fractured_shore.track", "starry_tropics.track", "anubis.track", "asguardia.track", "flying_dreams.track", "ghost_city.track", "joenail_jones.track", "mos_espa.track", "natsujo.track", "90_reset.track", "arabica.track", "clay_temples.track", "concrete_jungle.track", "desert_stallion.track", "hyperions_sanctuary.track", "las_calles.track", "last_remnant.track", "lu_muvimento.track", "malformations.track", "opal_place_ii.track", "re_akina.track", "sandline_ultimatum.track", "snow_park.track", "winter_hollow.track"];
+          , officialTrackFallbacks = ["summer1.track", "summer2.track", "summer3.track", "summer4.track", "summer5.track", "summer6.track", "summer7.track", "winter1.track", "winter2.track", "winter3.track", "winter4.track", "desert1.track", "desert2.track", "desert3.track", "desert4.track"]
+          , communityTrackFallbacks = ["zealot.track", "shrouded_oasis.track", "cogware.track", "land_of_the_rising_sun.track", "midas_metropolis.track", "frozen_in_time.track", "winterfell.track", "launch_control.track", "fractured_shore.track", "starry_tropics.track", "anubis.track", "asguardia.track", "flying_dreams.track", "ghost_city.track", "joenail_jones.track", "mos_espa.track", "natsujo.track", "90_reset.track", "arabica.track", "clay_temples.track", "concrete_jungle.track", "desert_stallion.track", "hyperions_sanctuary.track", "las_calles.track", "last_remnant.track", "lu_muvimento.track", "malformations.track", "opal_place_ii.track", "re_akina.track", "sandline_ultimatum.track", "snow_park.track", "winter_hollow.track"];
         const zB = class {
             constructor(e, t) {
                 SB.add(this),
@@ -42640,14 +42640,14 @@
                 CB.set(this, void 0),
                 PB.set(this, []),
                 BB(this, CB, t, "f");
-                HB("tracks/official/", QB).then((t => Promise.all(t.map((t => UB(this, SB, "m", IB).call(this, t, e)))))).then((e => {
+                trackDirectoryLoader("tracks/official/", officialTrackFallbacks).then((t => Promise.all(t.map((t => UB(this, SB, "m", IB).call(this, t, e)))))).then((e => {
                     BB(this, MB, e, "f")
                 }
                 )).catch((e => {
                     console.error(e)
                 }
                 ));
-                HB("tracks/community/", WB).then((t => Promise.all(t.map((t => UB(this, SB, "m", RB).call(this, t, e)))))).then((e => {
+                trackDirectoryLoader("tracks/community/", communityTrackFallbacks).then((t => Promise.all(t.map((t => UB(this, SB, "m", RB).call(this, t, e)))))).then((e => {
                     BB(this, _B, e, "f")
                 }
                 )).catch((e => {
