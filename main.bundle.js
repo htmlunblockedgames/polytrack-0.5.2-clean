@@ -1534,7 +1534,7 @@
               , r = n.n(i)
               , a = n(6314)
               , s = n.n(a)()(r());
-            s.push([e.id, "\n.leaderboard {\n\tposition: relative;\n\tmargin: 0;\n\tpadding: 0;\n\twidth: 600px;\n\theight: 100%;\n\ttext-align: left;\n\tdisplay: flex;\n\tflex-shrink: 0;\n\tflex-direction: column;\n\tbackground-color: var(--surface-color);\n}\n\n.leaderboard > h2 {\n\tmargin: 10px 10px 0 10px;\n\tpadding: 0;\n\tfont-weight: normal;\n\tfont-size: 38px;\n\ttext-align: center;\n\tcolor: var(--text-color);\n}\n\n.leaderboard > h3 {\n\tmargin: 0 10px 10px 10px;\n\tpadding: 0;\n\tfont-weight: normal;\n\tfont-size: 18px;\n\ttext-align: center;\n\tcolor: var(--text-color);\n\topacity: 0.5;\n}\n\n.leaderboard > .total-players {\n\tmargin: 10px;\n\tposition: absolute;\n\tright: 0;\n\ttop: 0;\n\ttext-align: center;\n\tfont-size: 14px;\n\tcolor: var(--text-color);\n\topacity: 0;\n\ttransition: opacity 0.5s ease-out;\n}\n.leaderboard > .total-players.fade-in {\n\topacity: 0.5;\n}\n\n.leaderboard > .container {\n\tmargin: 0;\n\tpadding: 0;\n\tflex-grow: 1;\n\tbackground-color: var(--surface-secondary-color);\n\toverflow-x: hidden;\n\toverflow-y: scroll;\n\tpointer-events: auto;\n}\n\n.leaderboard > .container > .loading-spinner-container {\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\twidth: 100%;\n\theight: 100%;\n}\n\n.leaderboard > .container > .error-message {\n\tpadding: 0 20px;\n\tfont-size: 20px;\n\ttext-align: center;\n\tcolor: var(--text-color);\n}\n\n.leaderboard > .container > button.main {\n\tmargin: 10px 10px 0 10px;\n\tpadding: 0;\n\tvertical-align: top;\n\twidth: calc(100% - 10px * 2);\n\theight: 100px;\n\tclip-path: polygon(0 0, 100% 0, calc(100% - 8px) 100%, 0 100%);\n\ttext-align: left;\n\twhite-space: nowrap;\n}\n.leaderboard > .container > button.main:last-of-type {\n\tmargin-bottom: 10px;\n}\n\n.leaderboard > .container > button.main.self:not(:focus-visible) {\n\tbackground-color: #2e4182;\n}\n\n.leaderboard > .container > button.main.selected {\n\tbackground-color: var(--button-hover-color);\n}\n.leaderboard > .container > button.main.selected::after {\n\twidth: 100%;\n}\n\n.leaderboard > .container > button.main > .checkmark {\n\tdisplay: none;\n}\n\n.leaderboard > .container > button.main.selected > .checkmark {\n\tdisplay: block;\n\tposition: absolute;\n\tright: 0;\n\ttop: 0;\n\tmargin: 6px;\n\twidth: 12px;\n\tanimation: leaderboard-checkmark-spawn 0.15s ease-out;\n}\n\n@keyframes leaderboard-checkmark-spawn {\n\t0% {\n\t\ttransform: scale(0);\n\t}\n\t90% {\n\t\ttransform: scale(1.2);\n\t}\n\t100% {\n\t\ttransform: scale(1);\n\t}\n}\n\n.leaderboard > .container > button.main > .image-container {\n\tdisplay: inline-block;\n\tposition: relative;\n\tbackground-color: rgba(0, 0, 0, 0.1);\n\twidth: 100px;\n\theight: 100px;\n}\n\n.leaderboard > .container > button.main > .image-container > img {\n\tposition: absolute;\n\tleft: 0;\n\ttop: 0;\n\twidth: 100%;\n\theight: 100%;\n\tpointer-events: none;\n\topacity: 0;\n\ttransition: opacity 0.5s ease-out;\n}\n.leaderboard > .container > button.main > .image-container > img.show {\n\topacity: 1;\n}\n\n.leaderboard > .container > button.main > .left, .leaderboard > .container > button.main > .right {\n\tdisplay: inline-block;\n\tvertical-align: top;\n}\n\n.leaderboard > .container > button.main > div > p {\n\tmargin: 0;\n\tpadding: 12px;\n\tfont-size: 28px;\n\tcolor: var(--text-color);\n}\n\n.leaderboard > .container > button.main > div > .position > span {\n\tfont-size: 20px;\n\topacity: 0.3;\n}\n\n.leaderboard > .container > button.main > div > .name-container {\n\tmargin: 0;\n\tpadding: 0;\n\tfont-size: 28px;\n\tdisplay: flex;\n\talign-items: center;\n\twidth: 360px;\n}\n\n.leaderboard > .container > button.main > div > .name-container > .name {\n\tpadding: 12px;\n\ttext-overflow: ellipsis;\n\toverflow: hidden;\n}\n.leaderboard > .container > button.main:focus-visible > div > .name-container > .name {\n\ttext-decoration: underline;\n}\n\n.leaderboard > .container > button.main > div > .name-container > .self {\n\tmargin-left: -16px;\n\tpadding: 12px;\n\topacity: 0.5;\n\tfont-size: 16px;\n\tfont-style: normal;\n}\n\n\n\n.leaderboard > .pages {\n\tmargin: 10px 10px 0 10px;\n\tdisplay: flex;\n\tflex-direction: row;\n}\n.leaderboard > .pages > button.page {\n\tpadding: 0;\n\twidth: 0;\n\tflex-grow: 1;\n}\n.leaderboard > .pages > button.selected {\n\tbackground-color: var(--button-hover-color);\n}\n\n.leaderboard > .button-wrapper > .back {\n\tmargin: 10px;\n}\n\n\n\n.leaderboard > .button-wrapper > .icon-button {\n\tmargin: 10px 0;\n\tfloat: right;\n}\n.leaderboard > .button-wrapper > .icon-button.first {\n\tmargin: 10px 10px 10px 0;\n}\n\n.leaderboard > .button-wrapper > .icon-button > img {\n\twidth: 28px;\n}\n.leaderboard > .button-wrapper > .icon-button.disabled > img, .leaderboard > .button-wrapper > .icon-button:disabled > img {\n\topacity: 0.25;\n}\n", ""]);
+            s.push([e.id, "\n.leaderboard {\n\tposition: relative;\n\tmargin: 0;\n\tpadding: 0;\n\twidth: 600px;\n\theight: 100%;\n\ttext-align: left;\n\tdisplay: flex;\n\tflex-shrink: 0;\n\tflex-direction: column;\n\tbackground-color: var(--surface-color);\n}\n\n.leaderboard > h2 {\n\tmargin: 10px 10px 0 10px;\n\tpadding: 0;\n\tfont-weight: normal;\n\tfont-size: 38px;\n\ttext-align: center;\n\tcolor: var(--text-color);\n}\n\n.leaderboard > h3 {\n\tmargin: 0 10px 10px 10px;\n\tpadding: 0;\n\tfont-weight: normal;\n\tfont-size: 18px;\n\ttext-align: center;\n\tcolor: var(--text-color);\n\topacity: 0.5;\n}\n\n.leaderboard > .total-players {\n\tmargin: 10px;\n\tposition: absolute;\n\tright: 0;\n\ttop: 0;\n\ttext-align: center;\n\tfont-size: 14px;\n\tcolor: var(--text-color);\n\topacity: 0;\n\ttransition: opacity 0.5s ease-out;\n}\n.leaderboard > .total-players.fade-in {\n\topacity: 0.5;\n}\n\n.leaderboard > .container {\n\tmargin: 0;\n\tpadding: 0;\n\tflex-grow: 1;\n\tbackground-color: var(--surface-secondary-color);\n\toverflow-x: hidden;\n\toverflow-y: scroll;\n\tpointer-events: auto;\n}\n\n.leaderboard > .container > .loading-spinner-container {\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\twidth: 100%;\n\theight: 100%;\n}\n\n.leaderboard > .container > .error-message {\n\tpadding: 0 20px;\n\tfont-size: 20px;\n\ttext-align: center;\n\tcolor: var(--text-color);\n}\n\n.leaderboard > .container > button.main {\n\tmargin: 10px 10px 0 10px;\n\tpadding: 0;\n\tvertical-align: top;\n\twidth: calc(100% - 10px * 2);\n\theight: 100px;\n\tclip-path: polygon(0 0, 100% 0, calc(100% - 8px) 100%, 0 100%);\n\ttext-align: left;\n\twhite-space: nowrap;\n}\n.leaderboard > .container > button.main:last-of-type {\n\tmargin-bottom: 10px;\n}\n\n.leaderboard > .container > button.main.self:not(:focus-visible) {\n\tbackground-color: #2e4182;\n}\n\n.leaderboard > .container > button.main.selected {\n\tbackground-color: var(--button-hover-color);\n}\n.leaderboard > .container > button.main.selected::after {\n\twidth: 100%;\n}\n\n.leaderboard > .container > button.main > .checkmark {\n\tdisplay: none;\n}\n\n.leaderboard > .container > button.main.selected > .checkmark {\n\tdisplay: block;\n\tposition: absolute;\n\tright: 0;\n\ttop: 0;\n\tmargin: 6px;\n\twidth: 12px;\n\tanimation: leaderboard-checkmark-spawn 0.15s ease-out;\n}\n\n@keyframes leaderboard-checkmark-spawn {\n\t0% {\n\t\ttransform: scale(0);\n\t}\n\t90% {\n\t\ttransform: scale(1.2);\n\t}\n\t100% {\n\t\ttransform: scale(1);\n\t}\n}\n\n.leaderboard > .container > button.main > .image-container {\n\tdisplay: inline-block;\n\tposition: relative;\n\tbackground-color: rgba(0, 0, 0, 0.1);\n\twidth: 100px;\n\theight: 100px;\n}\n\n.leaderboard > .container > button.main > .image-container > img {\n\tposition: absolute;\n\tleft: 0;\n\ttop: 0;\n\twidth: 100%;\n\theight: 100%;\n\tpointer-events: none;\n\topacity: 0;\n\ttransition: opacity 0.5s ease-out;\n}\n.leaderboard > .container > button.main > .image-container > img.show {\n\topacity: 1;\n}\n\n.leaderboard > .container > button.main > .left, .leaderboard > .container > button.main > .right {\n\tdisplay: inline-block;\n\tvertical-align: top;\n}\n\n.leaderboard > .container > button.main > div > p {\n\tmargin: 0;\n\tpadding: 12px;\n\tfont-size: 28px;\n\tcolor: var(--text-color);\n}\n\n.leaderboard > .container > button.main > div > .position > span {\n\tfont-size: 20px;\n\topacity: 0.3;\n}\n\n.leaderboard > .container > button.main > div > .name-container {\n\tmargin: 0;\n\tpadding: 0;\n\tfont-size: 28px;\n\tdisplay: flex;\n\talign-items: center;\n\twidth: 360px;\n}\n\n.leaderboard > .container > button.main > div > .name-container > .name {\n\tpadding: 12px;\n\ttext-overflow: ellipsis;\n\toverflow: hidden;\n}\n.leaderboard > .container > button.main:focus-visible > div > .name-container > .name {\n\ttext-decoration: underline;\n}\n\n.leaderboard > .container > button.main > div > .name-container > .self {\n\tmargin-left: -16px;\n\tpadding: 12px;\n\topacity: 0.5;\n\tfont-size: 16px;\n\tfont-style: normal;\n}\n\n\n\n.leaderboard > .button-wrapper > .back {\n\tmargin: 10px;\n}\n\n\n\n.leaderboard > .button-wrapper > .icon-button {\n\tmargin: 10px 0;\n\tfloat: right;\n}\n.leaderboard > .button-wrapper > .icon-button.first {\n\tmargin: 10px 10px 10px 0;\n}\n\n.leaderboard > .button-wrapper > .icon-button > img {\n\twidth: 28px;\n}\n.leaderboard > .button-wrapper > .icon-button.disabled > img, .leaderboard > .button-wrapper > .icon-button:disabled > img {\n\topacity: 0.25;\n}\n", ""]);
             const o = s
         }
         ,
@@ -37774,7 +37774,7 @@
             e[e.InvalidDuplicate = 3] = "InvalidDuplicate",
             e[e.InvalidManual = 4] = "InvalidManual"
         }(VT || (VT = {}));
-        var KT, qT, YT, XT, ZT, JT, $T, eC, tC, nC, iC, rC, aC, sC, oC, lC, cC, hC, dC, uC, pC, fC, mC, gC, vC, wC, yC, bC, AC, xC, kC = function(e, t, n, i, r) {
+        var KT, qT, YT, XT, ZT, JT, $T, eC, tC, nC, iC, rC, aC, sC, oC, lC, cC, dC, uC, pC, vC, wC, yC, bC, AC, kC = function(e, t, n, i, r) {
             if ("m" === i)
                 throw new TypeError("Private method is not writable");
             if ("a" === i && !r)
@@ -37812,9 +37812,6 @@
                 dC.set(this, null),
                 uC.set(this, !1),
                 pC.set(this, void 0),
-                fC.set(this, 0),
-                mC.set(this, 0),
-                gC.set(this, null),
                 vC.set(this, null),
                 wC.set(this, []),
                 kC(this, YT, t, "f"),
@@ -37849,11 +37846,7 @@
                 const f = document.createElement("div");
                 f.className = "loading-spinner",
                 EC(this, oC, "f").appendChild(f),
-                EC(this, KT, "m", bC).call(this, !1),
-                kC(this, hC, document.createElement("div"), "f"),
-                EC(this, hC, "f").className = "pages",
-                EC(this, rC, "f").appendChild(EC(this, hC, "f")),
-                EC(this, KT, "m", xC).call(this);
+                EC(this, KT, "m", bC).call(this, !1);
                 const m = document.createElement("div");
                 m.className = "button-wrapper",
                 EC(this, rC, "f").appendChild(m);
@@ -37873,9 +37866,7 @@
                 EC(this, lC, "f").disabled = !0,
                 EC(this, lC, "f").addEventListener("click", ( () => {
                     r.playUIClick(),
-                    null != EC(this, vC, "f") ? EC(this, KT, "m", yC).call(this, "smooth") : null != EC(this, gC, "f") && (kC(this, fC, EC(this, gC, "f"), "f"),
-                    EC(this, KT, "m", xC).call(this),
-                    EC(this, KT, "m", bC).call(this, !0))
+                    EC(this, KT, "m", yC).call(this, "smooth")
                 }
                 )),
                 m.appendChild(EC(this, lC, "f"))
@@ -37919,13 +37910,9 @@
         oC = new WeakMap,
         lC = new WeakMap,
         cC = new WeakMap,
-        hC = new WeakMap,
         dC = new WeakMap,
         uC = new WeakMap,
         pC = new WeakMap,
-        fC = new WeakMap,
-        mC = new WeakMap,
-        gC = new WeakMap,
         vC = new WeakMap,
         wC = new WeakMap,
         KT = new WeakSet,
@@ -37964,12 +37951,11 @@
                         EC(this, sC, "f").removeChild(EC(this, oC, "f"));
                         return
                     }
-                    const n = 20
-                      , r = EC(this, fC, "f") * n;
+                    const n = 10
+                      , r = 0;
                     EC(this, ZT, "f").getLeaderboard(EC(this, $T, "f").getCurrentUserProfile().tokenHash, EC(this, YT, "f"), r, n, null).then(( ({total: a, entries: s, userEntry: o}) => {
                         if (!i.isCancelled) {
-                            kC(this, mC, Math.ceil(a / n), "f"),
-                            EC(this, KT, "m", xC).call(this),
+                            kC(this, mC, 1, "f"),
                             EC(this, aC, "f").textContent = EC(this, XT, "f").get("{0} players", [GT(a)]),
                             EC(this, aC, "f").classList.add("fade-in");
                             for (let e = 0; e < s.length; e++) {
@@ -37977,11 +37963,9 @@
                                   , h = r + e + 1;
                                 EC(this, KT, "m", AC).call(this, h, n, a, o, c, t, i)
                             }
-                            if (EC(this, ZT, "f").determinismState == HT.Ok && (null != o ? (kC(this, gC, Math.floor((o.position - 1) / n), "f"),
-                            EC(this, lC, "f").disabled = !1,
+                            if (EC(this, ZT, "f").determinismState == HT.Ok && (null != o ? (EC(this, lC, "f").disabled = !1,
                             t && null != EC(this, vC, "f") && EC(this, KT, "m", yC).call(this, "instant"),
-                            EC(this, nC, "f").call(this, o, a)) : (kC(this, gC, null, "f"),
-                            EC(this, lC, "f").disabled = !0,
+                            EC(this, nC, "f").call(this, o, a)) : (EC(this, lC, "f").disabled = !0,
                             EC(this, nC, "f").call(this, null, a)),
                             !EC(this, uC, "f"))) {
                                 kC(this, uC, !0, "f");
@@ -38092,49 +38076,6 @@
                 e.textContent = "(" + EC(this, XT, "f").get("You") + ")",
                 w.appendChild(e)
             }
-        }
-        ,
-        xC = function e() {
-            EC(this, hC, "f").innerHTML = "";
-            const t = document.createElement("button");
-            let n;
-            t.className = "button",
-            t.textContent = "<",
-            EC(this, fC, "f") > 0 ? t.addEventListener("click", ( () => {
-                EC(this, JT, "f").playUIClick(),
-                kC(this, fC, EC(this, fC, "f") - 1, "f"),
-                EC(this, KT, "m", e).call(this),
-                EC(this, KT, "m", bC).call(this, !1)
-            }
-            )) : t.disabled = !0,
-            EC(this, hC, "f").appendChild(t),
-            n = EC(this, fC, "f") < 1e3 - Math.ceil(3.5) ? 7 : EC(this, fC, "f") < 1e5 - Math.ceil(2.5) ? 5 : 3;
-            const i = Math.max(0, EC(this, fC, "f") - Math.floor(n / 2));
-            for (let t = i; t < i + n; ++t) {
-                const n = document.createElement("button");
-                n.textContent = (t + 1).toString(),
-                t >= EC(this, mC, "f") ? (n.className = "button page",
-                n.disabled = !0) : t == EC(this, fC, "f") ? n.className = "button page selected" : (n.className = "button page",
-                n.addEventListener("click", ( () => {
-                    EC(this, JT, "f").playUIClick(),
-                    kC(this, fC, t, "f"),
-                    EC(this, KT, "m", e).call(this),
-                    EC(this, KT, "m", bC).call(this, !1)
-                }
-                ))),
-                EC(this, hC, "f").appendChild(n)
-            }
-            const r = document.createElement("button");
-            r.className = "button",
-            r.textContent = ">",
-            EC(this, fC, "f") + 1 >= EC(this, mC, "f") ? r.disabled = !0 : r.addEventListener("click", ( () => {
-                EC(this, JT, "f").playUIClick(),
-                kC(this, fC, EC(this, fC, "f") + 1, "f"),
-                EC(this, KT, "m", e).call(this),
-                EC(this, KT, "m", bC).call(this, !1)
-            }
-            )),
-            EC(this, hC, "f").appendChild(r)
         }
         ;
         const MC = SC;
