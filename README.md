@@ -49,15 +49,3 @@ git commit && git push
 - Leaderboard + host tweaks remain intact
 
 Run it before every deploy to catch regressions without reopening the bundle.
-
----
-
-## Host Allow-List
-
-Out of the box, the bundle treats these origins as “official”:
-
-- `sites.google.com/view/poly-track` (only pages under `/poly-track/`)
-
-Hosting anywhere else will surface the red “unofficial build” banner (leaderboards blocked) unless you patch the allow‑list in `main.bundle.js`.
-
-Backend deployment docs now live alongside the Worker source in `../polytrack-backend/README.md`.
